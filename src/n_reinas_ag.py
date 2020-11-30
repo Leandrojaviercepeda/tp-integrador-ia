@@ -40,7 +40,6 @@ def evaluar_aptitud(individuo):
 		if auxcont>1: #si son mas de dos entonces se atacan
 			idoGlobal = idoGlobal + auxcont
 	
-	#contamos las reinas que se atacan en diagonal hacia arriba
 	for i in range(0, len(individuo)):
 		auxcont = 0
 		for j in range(0,i+1):
@@ -58,7 +57,6 @@ def evaluar_aptitud(individuo):
 		if auxcont>1:
 			contDA2 = contDA2 + auxcont
 
-	#contamos las reinas que se atacan en diagonal hacia abajo
 	for i in range(0, len(individuo)):
 		auxcont = 0
 		for j in range(0, len(individuo)):
@@ -75,9 +73,9 @@ def evaluar_aptitud(individuo):
 		if auxcont > 1:
 			contDB2 = contDB2 + auxcont
 	
-	#print(idoGlobal, contDA1, contDA2, contDB1, contDB2)
+	# print(idoGlobal, contDA1, contDA2, contDB1, contDB2)
 	idoGlobal = idoGlobal + contDA1 + contDA2 + contDB1 + contDB2
-
+	
 	return idoGlobal
 
 
